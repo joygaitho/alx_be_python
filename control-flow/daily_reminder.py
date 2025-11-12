@@ -20,6 +20,8 @@ if time_bound == "yes":
     message += " that requires immediate attention today!"
 else:
     message += ". Consider completing it when you have free time."
-
-# Display the customized reminder
-print(f"Reminder: {message}")
+# check special case for no time-bound and low priority
+if priority == "low" and time_bound == "no":
+    print(f"Note: {message}")
+else:
+    print(f"Reminder: {message}")
