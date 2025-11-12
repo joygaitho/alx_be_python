@@ -1,8 +1,8 @@
 # Task Reminder Program
 # Prompt for user input
 task = input("Enter your task: ")
-priority = input("Priority (high/medium/low): ").lower()
-time_bound = input("Is it time-bound? (yes/no): ").lower()
+priority = input("Priority (high/medium/low): ")
+time_bound = input("Is it time-bound? (yes/no): ")
 
 # Process the task based on priority
 match priority:
@@ -22,4 +22,4 @@ else:
     message += ". Consider completing it when you have free time."
 
 # Display the customized reminder
-print(f"\nReminder: {message}")
+print(f"Reminder: {message}")
