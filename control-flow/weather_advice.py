@@ -1,4 +1,4 @@
-# ask user for the weather
+# ask the user for the weather
 weather = input("What's the weather like today? (sunny/rainy/cold):")
 # provide clothing recommendation
 if weather == "sunny":
