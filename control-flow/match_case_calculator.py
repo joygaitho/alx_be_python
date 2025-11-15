@@ -1,4 +1,4 @@
-# simple calculator using match case
+# simple calculator using match/case
 def calculator():
     # prompt user input
     try:
