@@ -4,7 +4,7 @@ def generate_multiplication_table():
         number = int(input("Enter a number to see its multiplication table:"))
     except ValueError:
         print("Invalide input! Enter a whole number.")
-        return #exit the function when an unrecoverable error occured
+        return 
     print(f"\n --- Multiplication table for {number} (1,10)---")
     # The range(1, 11) generates numbers from 1 up to (but not including) 11, which is 1, 2, ..., 10.
     for i in range(1,11):
