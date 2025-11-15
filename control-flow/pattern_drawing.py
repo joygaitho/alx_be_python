@@ -1,6 +1,6 @@
 # square parttern generator
 def pattern():
-    # prompt user to enter a positive number
+    # prompt user to enter only a positive number
     try:
         size = int(input("Enter the size of the pattern:"))
         if size <= 0:
