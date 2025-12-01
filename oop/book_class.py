@@ -9,18 +9,29 @@ class Book: # class definition
         return f"{self.title} by {self.author}, published in {self.year}."
     def __repr__(self):
         return f"Book('{self.title}', '{self.author}', {self.year})"
+
 if __name__ == "__main__":
-    book = Book("1984", "George Orwell", 1949)
-    print(book)  # Uses __str__
-    print("Testing __repr__ method (developer-friendly)")
-    print(repr(book))  # Uses __repr__
-    print("Both representations side by side")
-    print(f"str(): {str(book)}")
-    print(f"repr(): {repr(book)}")
-    print("Testing that __repr__ can recreate the object")
+    print("=== Creating Book Instances ===")
+    book1 = Book("1984", "George Orwell", 1949)
+    book2 = Book("Dune", "Timothee Chalamet", 1965)
+
+    print("\n=== Testing __str__ method (user-friendly) ===")
+    print(book1)  # Uses __str__
+    print(book2)  # Uses __str__
+
+    print("\n=== Testing __repr__ method (developer-friendly) ===")
+    print(repr(book1))  # Uses __repr__
+    print(repr(book2))  # Uses __repr__
+
+    print("\n=== Both representations side by side ===")
+    print(f"str():  {str(book1)}")
+    print(f"repr(): {repr(book1)}")
+
+    print("\n=== Testing that __repr__ can recreate the object ===")
     # The __repr__ output should be valid Python code
-    recreated_book = eval(repr(book))
-    print(f"Original: {book}")
-    print(f"Recreated: {recreated_book}")
-    print("Objects will be deleted when program ends")
+    recreated_book = eval(repr(book1))
+    print(f"Original:   {book1}")
+    print(f"Recreated:  {recreated_book}")
+
+    print("\n=== Objects will be deleted when program ends ===")
     # __del__ will be called automatically
