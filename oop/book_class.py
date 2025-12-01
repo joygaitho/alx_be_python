@@ -10,7 +10,17 @@ class Book: # class definition
     def __repr__(self):
         return f"Book('{self.title}', '{self.author}', {self.year})"
 if __name__ == "__main__":
-    book = Book('1984', 'George Orwell', 1949)
-    print("String representation:", str(book)) # uses __str__
-    print("Official representation:", repr(book)) # uses __repr__
-    del book # testing del
+    book = Book("1984", "George Orwell", 1949)
+    print(book)  # Uses __str__
+    print("Testing __repr__ method (developer-friendly)")
+    print(repr(book))  # Uses __repr__
+    print("Both representations side by side")
+    print(f"str(): {str(book)}")
+    print(f"repr(): {repr(book)}")
+    print("Testing that __repr__ can recreate the object")
+    # The __repr__ output should be valid Python code
+    recreated_book = eval(repr(book))
+    print(f"Original: {book}")
+    print(f"Recreated: {recreated_book}")
+    print("Objects will be deleted when program ends")
+    # __del__ will be called automatically
