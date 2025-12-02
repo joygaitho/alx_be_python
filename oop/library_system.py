@@ -60,7 +60,6 @@ class Library:
         """
         Prints details of each book in the library.
         """
-        print("\n--- Library Collection ---")
         if not self.books:
             print("The library is empty.")
         else:
@@ -68,7 +67,6 @@ class Library:
                 # Polymorphism: This calls the specific __str__ method 
                 # for whatever type of book (EBook or PrintBook) is in the list.
                 print(book)
-        print("--------------------------\n")
 
 
 # --- Example Usage ---
@@ -78,7 +76,7 @@ if __name__ == "__main__":
 
     # Create instances of different book types
     generic_book = Book("The Great Gatsby", "F. Scott Fitzgerald")
-    ebook = EBook("Python 101", "Mike Driscoll", 5) # 5MB
+    ebook = EBook("Python 101", "Mike Driscoll", 5) 
     print_book = PrintBook("Clean Code", "Robert C. Martin", 464)
 
     # Add books to the library
